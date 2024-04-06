@@ -168,14 +168,9 @@ header::after {
         font-size: 20px;
         font-weight: bold;
     }
-
-h2 {
-    color: black;
-    text-decoration: underline;
-    font-size: 2.5rem; 
+section{
     text-align: center;
-    padding-top: 100px;
-    margin: 0;
+    align-items: center;
 }
 
 img {
