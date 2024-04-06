@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Sign Up</title> 
+    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body> 
+    <header class="header">
+    <a href="../index.html" class="logo">Sabor&Arte</a>
+    <input type="checkbox" id="check"/>
+    <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+        <a href="#" class="nav-item" style="--i:0">Menú</a>
+        <a href="#" class="nav-item" style="--i:1">Menú</a>
+        <a href="login.html" class="nav-item" style="--i:2">Iniciar seccion</a>
+        <a href="signup.html" class="nav-item" style="--i:3">Registrase</a>
+        <a href="#" class="nav-item" style="--i:4">Menú</a>
+    </nav>
+</header>
+    <div class="wrapper">
+        <form id="signup-form">
+            <h1>Registration</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Usuario" id="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Contraseña" id="password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <button type="button" class="btn" id="register" onclick="signup()">Sign Up</button>
+            <div class="registre-link">
+                <p>or signup with</p>
+            </div>
+        </form>
+        <div class="socials">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-google-plus-g"></a>
+        </div>
+    </div>
+<script src="../js/script.js"></script>
+</body>
+</html>
