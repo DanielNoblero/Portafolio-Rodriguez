@@ -3,10 +3,10 @@
 
 /* CSS navbar */
 * {
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 main {
@@ -168,6 +168,7 @@ header::after {
         font-size: 20px;
         font-weight: bold;
     }
+
 section{
     text-align: center;
     align-items: center;
@@ -185,6 +186,7 @@ img {
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    column-gap: 20px;
 }
 
 .row {
@@ -195,8 +197,15 @@ img {
     text-align: center;
     margin: 0 auto;
     border: 2px solid #bb5e28;
+    height: 500px;
+    margin-bottom: 150px;
+    padding: 1rem;
 }
 
+.row p{
+    margin-top: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 @media (max-width: 768px) {
     .header {
         padding: 1.3rem 5%;
@@ -223,4 +232,51 @@ img {
         font-size: 1rem;
     }
 
+}
+footer {
+    text-align: center;
+    font-size: 10px;
+    background-color: black;
+    color: white;
+}
+
+footer p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer a {
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.redes a {
+    font-size: 20px;
+    color: white;
+    letter-spacing: 20px;
+}
+.subir {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    border-radius: 50%;
 }
