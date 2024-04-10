@@ -10,7 +10,7 @@
 }
 
 main {
-    height: 400px;
+    height: 600px;
     background-image: url(../multimedia/mesamadera.jpg);
     background-size: cover;
     background-position: bottom;
@@ -160,6 +160,7 @@ header::after {
         color: black;
         text-align: left;
         font-size: 1.5em;
+        margin-top: 15px;
     }
     
 .call p {
@@ -187,6 +188,7 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     column-gap: 20px;
+
 }
 
 .row {
@@ -196,16 +198,34 @@ img {
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    border: 2px solid #bb5e28;
+    border: 5px solid #bb5e28;
     height: 500px;
     margin-bottom: 150px;
     padding: 1rem;
+
+}
+
+.row img{
+    height: 400px;
+    width: 300px;
 }
 
 .row p{
     margin-top: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+button{
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10%;
+    border-color: #bb5e28;
+    background-color: #bb5e28;
+    color: aliceblue;
+    padding: 5px;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .header {
         padding: 1.3rem 5%;
@@ -218,7 +238,10 @@ img {
     .row {
         flex-basis: 100%;
     }
-
+    .row img{
+        width: auto;
+        height: auto;
+    }
     .call {
         width: 100%;
         padding: 10px;
@@ -226,10 +249,15 @@ img {
         float: none;
     }
 
-    .call h1,
+    .call h1{
+        text-align: center;
+        margin-top: 200px;
+        font-size: 30px;
+    }
     .call p {
         text-align: center;
         font-size: 1rem;
+        
     }
 
 }
