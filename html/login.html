@@ -2,59 +2,55 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Login</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="../css/signin.css">
     <link rel="stylesheet" href="../css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
-        <a href="../index.html" class="logo"><i class='bx bxs-bowl-hot'></i>Sabor&Arte</a>
+        <a href="../index.html" class="logo" aria-label="Inicio"><i class='bx bxs-bowl-hot'></i>Sabor&Arte</a>
         <input type="checkbox" id="check"/>
         <label for="check" class="icons">
-            <i class="bx bx-menu" id="menu-icon"></i>
-            <i class="bx bx-x" id="close-icon"></i>
+            <i class="bx bx-menu" id="menu-icon" aria-label="Menú"></i>
+            <i class="bx bx-x" id="close-icon" aria-label="Cerrar Menú"></i>
         </label>
-    
         <nav class="navbar">
             <a href="#" class="nav-item" style="--i:0">Menú</a>
-            <a href="#" class="nav-item" style="--i:1">Menú</a>
-            <a href="login.html" class="nav-item" style="--i:2">Iniciar seccion</a>
-            <a href="signup.html" class="nav-item" style="--i:3">Registrase</a>
-            <a href="contactus.html" class="nav-item" style="--i:4">Contactenos</a>
+            <a href="#" class="nav-item" style="--i:1">Especialidades</a>
+            <a href="login.html" class="nav-item" style="--i:2">Iniciar sesión</a>
+            <a href="signup.html" class="nav-item" style="--i:3">Registrarse</a>
+            <a href="contactus.html" class="nav-item" style="--i:4">Contáctenos</a>
         </nav>
     </header>
     <div class="wrapper">
-        <form action="">
-            <h1>Login</h1>
+        <form action="" method="post">
+            <h1>Iniciar Sesión</h1>
             <div class="input-box">
                 <input type="text" placeholder="Usuario" id="Username" required>
-            <i class='bx bxs-user'></i>
+                <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Contraseña" id="Password"  required>
+                <input type="password" placeholder="Contraseña" id="Password" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
-
             <div class="remember-forgot">
-                <label><input type="checkbox">Remember me</label>
-                <a href="Forgotpsw.html">Forgot password?</a>
+                <label><input type="checkbox">Recordarme</label>
+                <a href="Forgotpsw.html">¿Olvidaste tu contraseña?</a>
             </div>
-
-            <button type="submit" class="btn" id="login" oneclick="login()">Login</button>
+            <button type="submit" class="btn" id="login" onclick="login()">Entrar</button>
             <div class="registre-link">
-                <p>Don t have an account? <a href="signup.html">Register</a></p>
+                <p>¿No tienes cuenta? <a href="signup.html">Regístrate</a></p>
             </div>
         </form>
-        <div class="registre-link">or sign in with</div>
+        <div class="registre-link">o inicia sesión con</div>
         <div class="socials">
             <a href="#" class="fab fa-facebook-f"></a>
             <a href="#" class="fab fa-google-plus-g"></a>
         </div>
     </div>
-    
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-<script src="../js/script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
