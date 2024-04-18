@@ -31,30 +31,25 @@
             <p>Somos una empresa donde cocinar es nuestra pasion y nuestra comida se basa en una comida rica, abundate y casera.</p>
         </div>
     </main>
-<section>
-    <div class="container" >
-        <div class="row">
-            <img src="multimedia/pasta.jpg" alt="Imagen de pasta">
-            <p>Una pasta con salsa es un plato clásico y reconfortante, compuesto por fideos cocidos al dente, como spaghetti o penne, generosamente bañados en una salsa rica y sabrosa. Las opciones de salsa varían desde una tradicional marinara, cargada de tomates frescos y hierbas aromáticas, hasta una cremosa salsa Alfredo con un toque suave de ajo y queso parmesano. Este plato se puede personalizar con adiciones como albóndigas, verduras asadas o mariscos, convirtiéndolo en una comida versátil y satisfactoria.</p>
-            <button type="button"> Agregar al carrito</button>
+    <section class="container">
+        <div id="productos">
         </div>
-        <div class="row">
-            <img src="multimedia/pizza.jpg" alt="Imagen de pizza">
-            <p>Una pizza casera típica consiste en una base de masa crujiente y esponjosa, recién horneada, cubierta con una salsa de tomate rica y aromática. Sobre esta base se esparcen generosamente queso mozzarella derretido y dorado, y se complementa con ingredientes al gusto como rodajas de pepperoni, champiñones frescos, pimientos y cebolla. Este platillo es apreciado por su frescura y la posibilidad de personalizar los toppings según las preferencias de cada uno.</p>
-            <button type="button"> Agregar al carrito</button>
+    </section>
+    <section class="container">
+        <h2 class="titulo">Carrito:</h2>
+        <div class="carrito">
+            <div id="carrito-vacio">
+                <h4>Tu carrito está vacío. 🙁</h4>
+            </div>
+            <div class="carrito-productos" id="carrito-productos">
+                <!-- Esto se rellena en JS -->
+            </div>
+            <div class="carrito-total">
+                <h2>Total: <span id="carrito-total">$0</span></h2>
+            </div>
+            <button id="vaciar">Vaciar carrito</button>
         </div>
-        <div class="row">
-            <img src="multimedia/pollo.jpg" alt="Imagen de pollo">
-            <p>Las patas de pollo al horno son un plato sencillo y delicioso, ideal para una comida reconfortante. Este plato consiste en patas de pollo marinadas en una mezcla de especias, hierbas y a veces un toque de jugo de limón o ajo, que luego se hornean hasta alcanzar una piel dorada y crujiente mientras el interior permanece jugoso y tierno. Las patas de pollo al horno se pueden servir con una variedad de guarniciones, como verduras asadas, puré de papas o una ensalada fresca, haciendo de esta receta una opción versátil para cualquier ocasión.</p>
-        <button type="button"> Agregar al carrito</button>
-        </div>
-        <div class="row">
-            <img src="multimedia/tacos.jpg" alt="Imagen de tacos">
-            <p>Los tacos son un platillo mexicano popular que consiste en tortillas pequeñas, típicamente de maíz, rellenas de una variedad de ingredientes. Los rellenos clásicos incluyen carne asada, pollo, pescado, o carnitas, acompañados de cebolla, cilantro, y salsa fresca. Se pueden añadir otros complementos como guacamole, queso, o frijoles refritos. Los tacos destacan por su sabor intenso y su capacidad de personalización, siendo un alimento básico tanto en eventos informales como en comidas familiares.</p>
-            <button type="button"> Agregar al carrito</button>
-        </div>
-    </div>
-</section>
+    </section>
 <footer>
     <p>Todos los derechos reservados por copyright</p>
     <div class="redes ">
@@ -65,5 +60,6 @@
     </div>
     <a href="html/contactus.html">Contacto</a>
 </footer>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
