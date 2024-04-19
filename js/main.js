@@ -65,11 +65,12 @@ function actualizarCarrito() {
     if (carrito.length === 0) {
         carritoVacio.classList.remove("d-none");
         carritoProductos.classList.add("d-none");
+        carritoTotal.innerText = "Total: $0";  // Asegúrate de establecer el total a $0 cuando el carrito está vacío
     } else {
         carritoVacio.classList.add("d-none");
         carritoProductos.classList.remove("d-none");
-
         carritoProductos.innerHTML = "";
+
         carrito.forEach(producto => {
             const div = document.createElement("div");
             div.classList.add("carrito-producto");
@@ -85,11 +86,9 @@ function actualizarCarrito() {
             btn.innerText = "X";
             btn.addEventListener("click", () => borrarDelCarrito(producto));
             div.appendChild(btn);
-
             carritoProductos.appendChild(div);
         });
-        
-        
+
         const totalCarrito = calcularTotal();
         carritoTotal.innerText = `Total: $${totalCarrito}`;
     }
