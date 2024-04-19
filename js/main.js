@@ -88,6 +88,10 @@ function actualizarCarrito() {
 
             carritoProductos.appendChild(div);
         });
+        
+        
+        const totalCarrito = calcularTotal();
+        carritoTotal.innerText = `Total: $${totalCarrito}`;
     }
 }
 
@@ -113,7 +117,18 @@ function borrarDelCarrito(producto) {
     }
 }
 
+function calcularTotal() {
+    return carrito.reduce((total, producto) => total + (producto.precio * producto.cantidad), 0);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     renderizarProductos();
     actualizarCarrito();
+
+    
+    document.getElementById("vaciar-carrito").addEventListener("click", () => {
+        carrito.length = 0;
+        localStorage.removeItem("carrito"); 
+        actualizarCarrito(); 
+    });
 });

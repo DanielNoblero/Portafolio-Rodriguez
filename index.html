@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Sabor&Arte</title>
 </head>
+
 <body>
     <header class="header">
         <a href="#" class="logo"><i class='bx bxs-bowl-hot'></i>Sabor&Arte</a>
-        <input type="checkbox" id="check"/>
+        <input type="checkbox" id="check" />
         <label for="check" class="icons">
             <i class="bx bx-menu" id="menu-icon"></i>
             <i class="bx bx-x" id="close-icon"></i>
@@ -24,42 +26,45 @@
             <a href="html/contactus.html" class="nav-item" style="--i:4">Contactenos</a>
         </nav>
     </header>
-    
+
     <main>
         <div class="call">
             <h1>Sabor & Arte</h1>
-            <p>Somos una empresa donde cocinar es nuestra pasion y nuestra comida se basa en una comida rica, abundate y casera.</p>
+            <p>Somos una empresa donde cocinar es nuestra pasion y nuestra comida se basa en una comida rica, abundate y
+                casera.</p>
         </div>
     </main>
     <section class="container">
         <div id="productos">
+
         </div>
     </section>
     <section class="container">
+        <div class="row2">
         <h2 class="titulo">Carrito:</h2>
-        <div class="carrito">
-            <div id="carrito-vacio">
-                <h4>Tu carrito está vacío. 🙁</h4>
-            </div>
-            <div class="carrito-productos" id="carrito-productos">
-                <!-- Esto se rellena en JS -->
-            </div>
-            <div class="carrito-total">
-                <h2>Total: <span id="carrito-total">$0</span></h2>
-            </div>
-            <button id="vaciar">Vaciar carrito</button>
+        <div id="productos">
         </div>
-    </section>
-<footer>
-    <p>Todos los derechos reservados por copyright</p>
-    <div class="redes ">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="" class="fab fa-instagram"></a>
-        <a href="https://github.com/DanielNoblero/Portafolio.git" class="fab fa-github"></a>
+        <div id="carrito-vacio" class="d-none">
+            <h4>Tu carrito está vacío. 🙁</h4>
+        </div>
+        <div id="carrito-productos" class="d-none">
+        </div>
+        <div id="carrito-total">
+        </div>
+        <button id="vaciar-carrito" class="button">Vaciar Carrito</button>
     </div>
-    <a href="html/contactus.html">Contacto</a>
-</footer>
-<script type="module" src="js/main.js"></script>
+    </section>
+    <footer>
+        <p>Todos los derechos reservados por copyright</p>
+        <div class="redes ">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-instagram"></a>
+            <a href="https://github.com/DanielNoblero/Portafolio.git" class="fab fa-github"></a>
+        </div>
+        <a href="html/contactus.html">Contacto</a>
+    </footer>
+    <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

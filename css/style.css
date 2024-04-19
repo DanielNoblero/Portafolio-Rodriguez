@@ -205,6 +205,24 @@ img {
     margin-bottom: 100px;
     padding: 1rem;
 }
+.row2 {
+    align-items: center;
+    text-align: center;
+    margin:  auto;
+    border: 5px solid #bb5e28;
+    border-radius: 5%;
+    height: auto;
+    width: auto;
+    margin-bottom: 100px;
+    padding: .5rem;
+}
+.row2 h3{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    text-align: center;
+}
+
 h3{
     margin-top: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -259,14 +277,14 @@ h3{
     align-items: center;
     justify-content: space-between;
     background-color: var(--clr-black);
-    padding: .5rem 1rem;
+    padding:  1rem;
     border-radius: 1rem;
     color: var(--clr-white);
 }
 
 .carrito-producto-btn {
     background-color: var(--clr-white);
-    border: 0;
+    border: 1;
     padding: .25rem;
     border-radius: .25rem;
     cursor: pointer;
