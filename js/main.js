@@ -30,6 +30,12 @@ const productos = [
         precio: 350,
         descripcion:"Las tapas gallegas son una exquisita selección de pequeños platos y aperitivos originarios de Galicia, en el noroeste de España. Se caracterizan por su diversidad y riqueza, incorporando productos del mar y del campo gallegos, destacando ingredientes como mariscos frescos, carnes curadas y quesos locales. Estas tapas no solo son deliciosas sino también una parte esencial de la cultura gastronómica gallega, ofreciendo una experiencia culinaria que invita a compartir y disfrutar en buena compañía.",
         img: "./multimedia/tapas.jpg"
+    },
+    {
+        titulo: "Empandas",
+        precio: 300,
+        descripcion:"Las empanadas son un tipo de pastelillo relleno que se puede encontrar en diversas culturas alrededor del mundo, pero son especialmente populares en Latinoamérica, España y Filipinas. Consisten en una masa exterior, que puede ser de harina de trigo o maíz, rellena con una variedad de ingredientes que varían según la región. Los rellenos típicos incluyen carne, pollo, queso, vegetales o mariscos, a menudo acompañados de cebolla, huevo duro, aceitunas y especias. Las empanadas se pueden hornear o freír, y son apreciadas por su versatilidad y conveniencia como aperitivo, comida principal o snack.",
+        img: "./multimedia/Empandas.jpg"
     }
 ];
 
