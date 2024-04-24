@@ -225,14 +225,17 @@ img {
 
 h3{
     margin-top: 15px;
+    margin-bottom: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30px;
     text-decoration: underline;
 }
 
 .row-img{
-    height: 100px;
-    width: 100px;
+    border-radius: .75rem;
+    object-fit: cover;
+    width: 300px;
+    aspect-ratio: 1/1;
 }
 
 .row-p{
@@ -263,13 +266,13 @@ h3{
     cursor: pointer;
     outline: none;
     }
-  
-  .button:hover {
+
+.button:hover {
     background-color: #bb5e28;
     box-shadow: 0px 15px 20px rgba(199, 0, 57, 0.4);
     color: #fff;
     transform: translateY(-7px);
-  }
+}
 
 .carrito-producto {
     display: flex;

@@ -10,7 +10,7 @@ const productos = [
     {
         titulo: "Pizza",
         precio: 600,
-        descripcion:"Una pizza casera típica consiste en una base de masa crujiente y esponjosa, recién horneada, cubierta con una salsa de tomate rica y aromática. Sobre esta base se esparcen generosamente queso mozzarella derretido y dorado, y se complementa con ingredientes al gusto como rodajas de pepperoni, champiñones frescos, pimientos y cebolla. Este platillo es apreciado por su frescura y la posibilidad de personalizar los toppings según las preferencias de cada uno.",
+        descripcion:" Una pizza casera típica consiste en una base de masa crujiente y esponjosa, recién horneada, cubierta con una salsa de tomate rica y aromática. Sobre esta base se esparcen generosamente queso mozzarella derretido y dorado, y se complementa con ingredientes al gusto como rodajas de pepperoni, champiñones frescos, pimientos, albahaca, tomate fresco y cebolla. Este platillo es apreciado por su frescura y la posibilidad de personalizar los toppings según las preferencias de cada uno.",
         img: "./multimedia/pizza.jpg"
     }, 
     {
@@ -34,7 +34,7 @@ const productos = [
     {
         titulo: "Empandas",
         precio: 300,
-        descripcion:"Las empanadas son un tipo de pastelillo relleno que se puede encontrar en diversas culturas alrededor del mundo, pero son especialmente populares en Latinoamérica, España y Filipinas. Consisten en una masa exterior, que puede ser de harina de trigo o maíz, rellena con una variedad de ingredientes que varían según la región. Los rellenos típicos incluyen carne, pollo, queso, vegetales o mariscos, a menudo acompañados de cebolla, huevo duro, aceitunas y especias. Las empanadas se pueden hornear o freír, y son apreciadas por su versatilidad y conveniencia como aperitivo, comida principal o snack.",
+        descripcion:" Las empanadas son un tipo de pastelillo relleno que se puede encontrar en diversas culturas alrededor del mundo, pero son especialmente populares en Latinoamérica, España y Filipinas. Consisten en una masa exterior, que puede ser de harina de trigo o maíz, rellena con una variedad de ingredientes que varían según la región. Los rellenos típicos incluyen carne, pollo, queso, vegetales o mariscos, a menudo acompañados de cebolla, huevo duro, aceitunas y especias. Las empanadas se pueden hornear o freír.",
         img: "./multimedia/Empandas.jpg"
     }
 ];
@@ -71,7 +71,7 @@ function actualizarCarrito() {
     if (carrito.length === 0) {
         carritoVacio.classList.remove("d-none");
         carritoProductos.classList.add("d-none");
-        carritoTotal.innerText = "Total: $0";  // Asegúrate de establecer el total a $0 cuando el carrito está vacío
+        carritoTotal.innerText = "Total: $0";
     } else {
         carritoVacio.classList.add("d-none");
         carritoProductos.classList.remove("d-none");
@@ -86,17 +86,37 @@ function actualizarCarrito() {
                 <p>Cant: ${producto.cantidad}</p>
                 <p>Subtotal: $${producto.precio * producto.cantidad}</p>
             `;
+            const btnRestar = document.createElement("button");
+            btnRestar.classList.add("carrito-producto-btn");
+            btnRestar.innerText = "-";
+            btnRestar.addEventListener("click", () => restarDelCarrito(producto));
+            div.appendChild(btnRestar);
 
-            const btn = document.createElement("button");
-            btn.classList.add("carrito-producto-btn");
-            btn.innerText = "X";
-            btn.addEventListener("click", () => borrarDelCarrito(producto));
-            div.appendChild(btn);
+            const btnSumar = document.createElement("button");
+            btnSumar.classList.add("carrito-producto-btn");
+            btnSumar.innerText = "+";
+            btnSumar.addEventListener("click", () => sumarDelCarrito(producto));
+            div.appendChild(btnSumar);
+
+            const btnEliminar = document.createElement("button");
+            btnEliminar.classList.add("carrito-producto-btn");
+            btnEliminar.innerText = "X";
+            btnEliminar.addEventListener("click", () => borrarDelCarrito(producto));
+            div.appendChild(btnEliminar);
+            
             carritoProductos.appendChild(div);
         });
 
         const totalCarrito = calcularTotal();
         carritoTotal.innerText = `Total: $${totalCarrito}`;
+
+        const botonPagar = document.createElement("button");
+        botonPagar.innerText = "Pagar";
+        botonPagar.classList.add("button", "boton-pagar");
+        botonPagar.addEventListener("click", () => {
+            window.location.href = '../html/checkout.html'; // Cambia 'checkout.html' al archivo que desees
+        });
+        carritoTotal.appendChild(botonPagar);
     }
 }
 
@@ -108,6 +128,17 @@ function agregarAlCarrito(producto) {
         carrito.push({ ...producto, cantidad: 1 });
     }
     actualizarCarrito();
+
+    Toastify({
+        text: `Se agregó ${producto.titulo}`,
+        duration: 3000,  // Duración en milisegundos
+        close: true,     // Muestra un botón para cerrar el toast
+        gravity: "bottom",  // `top` o `bottom`
+        position: 'right', // `left`, `center` o `right`
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        className: "info"
+    }).showToast();
+    
 }
 
 function borrarDelCarrito(producto) {
@@ -120,6 +151,40 @@ function borrarDelCarrito(producto) {
         }
         actualizarCarrito();
     }
+}
+
+const restarDelCarrito = (producto) =>{
+    if (producto.cantidad ===1){
+        borrarDelCarrito(producto);
+    } else {
+    producto.cantidad--;
+    }
+    actualizarCarrito();
+
+    Toastify({
+        text: `Se resto ${producto.titulo}`,
+        duration: 3000,  // Duración en milisegundos
+        close: true,     // Muestra un botón para cerrar el toast
+        gravity: "bottom",  // `top` o `bottom`
+        position: 'right', // `left`, `center` o `right`
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        className: "info"
+    }).showToast();
+}
+
+const sumarDelCarrito = (producto) =>{
+    producto.cantidad++;
+    actualizarCarrito();
+
+    Toastify({
+        text: `Se agregó ${producto.titulo}`,
+        duration: 3000,  // Duración en milisegundos
+        close: true,     // Muestra un botón para cerrar el toast
+        gravity: "bottom",  // `top` o `bottom`
+        position: 'right', // `left`, `center` o `right`
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        className: "info"
+    }).showToast();
 }
 
 function calcularTotal() {

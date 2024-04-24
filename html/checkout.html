@@ -2,152 +2,84 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/checkout.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Formulario de pagos</title>
 </head>
-<header class="header">
-    <a href="../index.html" class="logo"><i class='bx bxs-bowl-hot'></i>Sabor&Arte</a>
-    <input type="checkbox" id="check" />
-    <label for="check" class="icons">
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <i class="bx bx-x" id="close-icon"></i>
-    </label>
-
-    <nav class="navbar">
-        <a href="#" class="nav-item" style="--i:0">Menú</a>
-        <a href="#" class="nav-item" style="--i:1">Especialidades</a>
-        <a href="login.html" class="nav-item" style="--i:2">Iniciar sesión</a>
-        <a href="signup.html" class="nav-item" style="--i:3">Registrarse</a>
-        <a href="contactus.html" class="nav-item" style="--i:4">Contáctenos</a>
-    </nav>
-</header>
 
 <body>
-    <div class='container'>
-        <div class='window'>
-            <div class='order-info'>
-                <div class='order-info-content'>
-                    <h2>Order Summary</h2>
-                    <div class='line'></div>
-                    <table class='order-table'>
-                        <tbody>
-                            <tr>
-                                <td><img src='https://dl.dropboxusercontent.com/s/sim84r2xfedj99n/%24_32.JPG'
-                                        class='full-width'></img>
-                                </td>
-                                <td>
-                                    <br> <span class='thin'>Nike</span>
-                                    <br> Free Run 3.0 Women<br> <span class='thin small'> Color: Grey/Orange, Size:
-                                        10.5<br><br></span>
-                                </td>
+    <header class="header">
+        <a href="../index.html" class="logo"><i class='bx bxs-bowl-hot'></i>Sabor&Arte</a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="icons">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <i class="bx bx-x" id="close-icon"></i>
+        </label>
 
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class='price'>$99.95</div>
-                                </td>
-                            </tr>
-                        </tbody>
+        <nav class="navbar">
+            <a href="#" class="nav-item" style="--i:0">Menú</a>
+            <a href="#" class="nav-item" style="--i:1">Menú</a>
+            <a href="../html/login.html" class="nav-item" style="--i:2">Iniciar sesión</a>
+            <a href="../html/signup.html" class="nav-item" style="--i:3">Registrarse</a>
+            <a href="../html/contactus.html" class="nav-item" style="--i:4">Contactenos</a>
+        </nav>
+    </header>
+    
+    <div class="card">
+        <div class="card__header">
+            <h1>Payment information</h1>
+        </div>
+        <form action="">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input class="full-name empty" type="text" id="full-name" aria-label="Full Name"
+                    placeholder="Nombre Completo" required />
+            </div>
 
-                    </table>
-                    <div class='line'></div>
-                    <table class='order-table'>
-                        <tbody>
-                            <tr>
-                                <td><img src='https://dl.dropboxusercontent.com/s/qbj9tsbvthqq72c/Vintage-20L-Backpack-by-Fj%C3%A4llr%C3%A4ven.jpg'
-                                        class='full-width'></img>
-                                </td>
-                                <td>
-                                    <br> <span class='thin'>Fjällräven</span>
-                                    <br>Vintage Backpack<br> <span class='thin small'> Color: Olive, Size: 20L</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class='price'>$235.95</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class='line'></div>
-                    <table class='order-table'>
-                        <tbody>
-                            <tr>
-                                <td><img src='https://dl.dropboxusercontent.com/s/nbr4koso8dpoggs/6136C1p5FjL._SL1500_.jpg'
-                                        class='full-width'></img>
-                                </td>
-                                <td>
-                                    <br> <span class='thin'>Monobento</span>
-                                    <br>Double Lunchbox<br> <span class='thin small'> Color: Pink, Size: Medium</span>
-                                </td>
+            <div class="icon-group-container">
+                <label for="card-number">Card Number</label>
+                <div class="icon-group empty">
+                    <input type="text" id="card-number" aria-label="Card Number" class="empty"
+                        placeholder="1234 1234 1234 1234" required />
+                    <img id="card-icon" src="../multimedia/credit-card.png" height="14" width="14" />
+                </div>
+            </div>
 
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class='price'>$25.95</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class='line'></div>
-                    <div class='total'>
-                        <span style='float:left;'>
-                            <div class='thin dense'>VAT 19%</div>
-                            <div class='thin dense'>Delivery</div>
-                            TOTAL
-                        </span>
-                        <span style='float:right; text-align:right;'>
-                            <div class='thin dense'>$68.75</div>
-                            <div class='thin dense'>$4.95</div>
-                            $435.55
-                        </span>
+            <div class="row-group">
+                <div class="form-group">
+                    <label for="expiration">Expiration Date</label>
+                    <input class="expiration-input empty" type="tel" id="expiration" minlength="5" maxlength="5"
+                        pattern="/{5}/" placeholder="MM/YY" required />
+                </div>
+                <div class="icon-group-container">
+                    <label for="cvv">CVV</label>
+                    <div class="icon-group empty">
+                        <input class="cvv-input empty" type="tel" maxlength="3" placeholder="···" id="cvv" required />
+                        <img id="info-icon" src="../multimedia/info.png" height="14" width="14" />
                     </div>
                 </div>
             </div>
-            <div class='credit-info'>
-                <div class='credit-info-content'>
-                    <table class='half-input-table'>
-                        <tr>
-                            <td>Please select your card: </td>
-                            <td>
-                                <div class='dropdown' id='card-dropdown'>
-                                    <div class='dropdown-btn' id='current-card'>Visa</div>
-                                    <div class='dropdown-select'>
-                                        <ul>
-                                            <li>Master Card</li>
-                                            <li>American Express</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80'
-                        class='credit-card-image' id='credit-card-image'></img>
-                    Nombre del titular
-                    <input class='input-field'></input>
-                    Numero de tarjeta
-                    <input class='input-field'></input>
-                    <table class='half-input-table'>
-                        <tr>
-                            <td> Expira
-                                <input class='input-field'></input>
-                            </td>
-                            <td>CVC
-                                <input class='input-field'></input>
-                            </td>
-                        </tr>
-                    </table>
-                    <button class='pay-btn'>Checkout</button>
-
-                </div>
-
+            <div class="form-group">
+                <label for="cardholder-name">Address</label>
+                <input type="text" id="address" class="empty" aria-label="adress" placeholder="Av. Morelos 123"
+                    required />
             </div>
+            <button type="submit" class="disabled" disabled>Confirm payment</button>
+        </form>
+        <div class="verify-info">
+            <small>Verify the information is correct</small>
         </div>
     </div>
-    <script type="module" src="../js/checkout.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="../js/checkout.js" defer></script>
 </body>
 
 </html>
