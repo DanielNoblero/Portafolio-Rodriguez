@@ -306,7 +306,9 @@ h3{
         flex-direction: column;
         max-width: 80%;
     }
-
+    .row2{
+    flex-basis: 100%;
+    }
     .row {
         flex-basis: 100%;
     }
