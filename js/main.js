@@ -114,7 +114,7 @@ function actualizarCarrito() {
         botonPagar.innerText = "Pagar";
         botonPagar.classList.add("button", "boton-pagar");
         botonPagar.addEventListener("click", () => {
-            window.location.href = '../html/checkout.html'; // Cambia 'checkout.html' al archivo que desees
+            window.location.href = 'html/checkout.html'; 
         });
         carritoTotal.appendChild(botonPagar);
     }
@@ -131,10 +131,10 @@ function agregarAlCarrito(producto) {
 
     Toastify({
         text: `Se agregó ${producto.titulo}`,
-        duration: 3000,  // Duración en milisegundos
-        close: true,     // Muestra un botón para cerrar el toast
-        gravity: "bottom",  // `top` o `bottom`
-        position: 'right', // `left`, `center` o `right`
+        duration: 3000,  
+        close: true,     
+        gravity: "bottom",  
+        position: 'right',
         backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
         className: "info"
     }).showToast();
