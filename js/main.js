@@ -1,6 +1,6 @@
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-fetch("../data/productos.json")
+fetch("./data/productos.json")
     .then(res => res.json())
     .then(data => renderizarProductos(data))
     .catch(error => console.error('Error al cargar los productos:', error));
