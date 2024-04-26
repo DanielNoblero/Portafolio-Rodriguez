@@ -37,7 +37,9 @@ function mostrarToast(mensaje) {
         close: true,
         gravity: "bottom",
         position: 'right',
-        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
         className: "info"
     }).showToast();
 }
