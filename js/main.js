@@ -32,18 +32,6 @@ function renderizarProductos(productos) {
     });
 }
 
-function mostrarToast(mensaje) {
-    Toastify({
-        text: mensaje,
-        duration: 3000,
-        close: true,
-        gravity: "bottom",
-        position: 'right',
-        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-        className: "info"
-    }).showToast();
-}
-
 function actualizarCarrito() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     if (carrito.length === 0) {
@@ -106,32 +94,63 @@ function agregarAlCarrito(producto) {
         carrito.push({ ...producto, cantidad: 1 });
     }
     actualizarCarrito();
-    mostrarToast(`Se agregó ${producto.titulo}`);
+
+    Toastify({
+        text: `Se agregó ${producto.titulo}`,
+        duration: 3000, 
+        close: true,     
+        gravity: "bottom",  
+        position: 'right', 
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        className: "info"
+    }).showToast();
     
 }
 
 function borrarDelCarrito(producto) {
-    const prodIndex = carrito.findIndex(item => producto.titulo === item.titulo);
+    const prodIndex = carrito.findIndex(item => item.titulo === producto.titulo);
     if (prodIndex !== -1) {
-        carrito.splice(prodIndex, 1);
+        if (carrito[prodIndex].cantidad > 1) {
+            carrito[prodIndex].cantidad--;
+        } else {
+            carrito.splice(prodIndex, 1);
+        }
         actualizarCarrito();
     }
 }
 
-function restarDelCarrito(producto) {
-    if (producto.cantidad > 1) {
-        producto.cantidad--;
-    } else {
+const restarDelCarrito = (producto) =>{
+    if (producto.cantidad ===1){
         borrarDelCarrito(producto);
+    } else {
+    producto.cantidad--;
     }
     actualizarCarrito();
-    mostrarToast(`Se restó ${producto.titulo}`);
+
+    Toastify({
+        text: `Se resto ${producto.titulo}`,
+        duration: 3000, 
+        close: true,  
+        gravity: "bottom", 
+        position: 'right', 
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        className: "info"
+    }).showToast();
 }
 
 const sumarDelCarrito = (producto) =>{
     producto.cantidad++;
     actualizarCarrito();
-    mostrarToast(`Se agregó ${producto.titulo}`);
+
+    Toastify({
+        text: `Se agregó ${producto.titulo}`,
+        duration: 3000,  
+        close: true,    
+        gravity: "bottom", 
+        position: 'right', 
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        className: "info"
+    }).showToast();
 }
 
 function calcularTotal() {
