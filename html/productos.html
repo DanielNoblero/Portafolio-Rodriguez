@@ -5,7 +5,7 @@
     <link rel="icon" href="icono/favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Sabor&Arte</title>
@@ -13,7 +13,7 @@
 
 <body>
     <header class="header">
-        <a href="index.html" class="logo"><i class='bx bxs-bowl-hot'></i>Sabor&Arte</a>
+        <a href="../index.html" class="logo"><i class='bx bxs-bowl-hot'></i>Sabor&Arte</a>
         <input type="checkbox" id="check" />
         <label for="check" class="icons">
             <i class="bx bx-menu" id="menu-icon"></i>
@@ -28,7 +28,6 @@
             <a href="html/contactus.html" class="nav-item" style="--i:4">Contactenos</a>
         </nav>
     </header>
-
     <main>
         <div class="call">
             <h1>Sabor & Arte</h1>
@@ -36,24 +35,10 @@
                 casera.</p>
         </div>
     </main>
-    <section class="container" id="productos">
-        
+    <section class="container" id="producto-detalle">
+    
     </section>
-    <section class="container">
-        <div class="row2">
-        <h2 class="titulo">Carrito:</h2>
-        <div id="productos">
-        </div>
-        <div id="carrito-vacio" class="d-none">
-            <h4>Tu carrito está vacío. 🙁</h4>
-        </div>
-        <div id="carrito-productos" class="d-none">
-        </div>
-        <div id="carrito-total">
-        </div>
-        <button id="vaciar-carrito" class="button" class="d-none">Vaciar Carrito</button>
-    </div>
-    </section>
+
     <footer>
         <p>Todos los derechos reservados por copyright</p>
         <div class="hora" id="hora-local"></div>
@@ -65,7 +50,7 @@
         </div>
         <a href="html/contactus.html">Contacto</a>
     </footer>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="../js/productos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>

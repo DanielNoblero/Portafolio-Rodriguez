@@ -28,18 +28,30 @@ const renderizarProductos = (productos) => {
         const div = document.createElement("div");
         div.classList.add("row");
         div.innerHTML = `
-        <h3>${producto.titulo}</h3>
-        <img class="row-img" src="${producto.img}" alt="${producto.titulo}">
-        <p class="row-p">${producto.descripcion}</p>
-        <p class="row-p2">$${producto.precio}</p>
-      `;
+            <h3>${producto.titulo}</h3>
+            <img class="row-img" src="${producto.img}" alt="${producto.titulo}">
+            <p class="row-p2">$${producto.precio}</p>
+        `;
 
-        const btn = document.createElement("button");
-        btn.classList.add("button");
-        btn.innerText = "Agregar al carrito";
-        btn.addEventListener("click", () => agregarAlCarrito(producto));
+        const divBotones = document.createElement("div");
+        divBotones.classList.add("botones");
 
-        div.appendChild(btn);
+        // Botón para agregar al carrito
+        const btnAgregar = document.createElement("button");
+        btnAgregar.classList.add("button");
+        btnAgregar.innerText = "Agregar al carrito";
+        btnAgregar.addEventListener("click", () => agregarAlCarrito(producto));
+        divBotones.appendChild(btnAgregar);
+
+        // Botón para ver más detalles
+        const btnVerMas = document.createElement("button");
+        btnVerMas.innerText = "Ver más";
+        btnVerMas.classList.add("button");
+        btnVerMas.addEventListener("click", () => {
+            window.open(`../html/productos.html?id=${producto.id}`,`black`);
+        });
+        divBotones.appendChild(btnVerMas);
+        div.appendChild(divBotones);
         contenedorProductos.appendChild(div);
     });
 };
@@ -63,6 +75,7 @@ const actualizarCarrito = () => {
     const carritoVacio = document.querySelector("#carrito-vacio");
     const carritoProductos = document.querySelector("#carrito-productos");
     const carritoTotal = document.querySelector("#carrito-total");
+    const btnVacio = document.querySelector("#vaciar-carrito");
 
     localStorage.setItem("carrito", JSON.stringify(carrito));
 
@@ -70,10 +83,12 @@ const actualizarCarrito = () => {
         carritoVacio.classList.remove("d-none");
         carritoProductos.classList.add("d-none");
         carritoTotal.innerText = "Total: $0";
+        btnVacio.classList.add("d-none")
     } else {
         carritoVacio.classList.add("d-none");
         carritoProductos.classList.remove("d-none");
         carritoProductos.innerHTML = "";
+        btnVacio.classList.remove("d-none")
 
         carrito.forEach((producto) => {
             const div = document.createElement("div");
@@ -183,23 +198,22 @@ const vaciarCarrito = () => {
         showCancelButton: true,
         confirmButtonText: "Sí, vaciarlo",
         cancelButtonText: "No, cancelar",
-        reverseButtons: true // Invertir el orden de los botones para tener cancelar a la derecha
+        reverseButtons: true 
     }).then((result) => {
         if (result.isConfirmed) {
-            // Aquí se ejecuta el código para vaciar el carrito
-            carrito.length = 0; // Vaciar el carrito
-            localStorage.removeItem("carrito"); // Eliminar del almacenamiento local
-            actualizarCarrito(); // Actualizar la vista del carrito
-            mostrarToast("El carrito fue vaciado"); // Mostrar un mensaje emergente para retroalimentación
+            
+            carrito.length = 0;
+            localStorage.removeItem("carrito");
+            actualizarCarrito(); 
+            mostrarToast("El carrito fue vaciado"); 
 
-            // Mensaje de éxito
             swalWithBootstrapButtons.fire({
                 title: "Vaciado",
                 text: "El carrito se vació con éxito.",
                 icon: "success"
             });
         } else if (result.dismiss === Swal.DismissReason.cancel) {
-            // Mensaje si el usuario cancela la acción
+            
             swalWithBootstrapButtons.fire({
                 title: "Cancelado",
                 text: "El carrito sigue intacto.",
