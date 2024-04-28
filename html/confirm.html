@@ -1,46 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago confirmado</title>
+    <link rel="stylesheet" href="/css/signin.css">
     <link rel="stylesheet" href="/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <title>Pago confirmado</title>
 </head>
 <body>
     <header class="header">
-        <a href="/index.html" class="logo"><i class='bx bxs-bowl-hot'></i>Sabor&Arte</a>
-        <input type="checkbox" id="check" />
+        <a href="../index.html" class="logo" aria-label="Inicio"><i class='bx bxs-bowl-hot'></i>Sabor&Arte</a>
+        <input type="checkbox" id="check"/>
         <label for="check" class="icons">
-            <i class="bx bx-menu" id="menu-icon"></i>
-            <i class="bx bx-x" id="close-icon"></i>
+            <i class="bx bx-menu" id="menu-icon" aria-label="Menú"></i>
+            <i class="bx bx-x" id="close-icon" aria-label="Cerrar Menú"></i>
         </label>
-
         <nav class="navbar">
             <a href="#" class="nav-item" style="--i:0">Menú</a>
-            <a href="#" class="nav-item" style="--i:1">Menú</a>
-            <a href="html/login.html" class="nav-item" style="--i:2">Iniciar sesión</a>
-            <a href="html/signup.html" class="nav-item" style="--i:3">Registrarse</a>
-            <a href="html/contactus.html" class="nav-item" style="--i:4">Contactenos</a>
+            <a href="#" class="nav-item" style="--i:1">Especialidades</a>
+            <a href="login.html" class="nav-item" style="--i:2">Iniciar sesión</a>
+            <a href="signup.html" class="nav-item" style="--i:3">Registrarse</a>
+            <a href="contactus.html" class="nav-item" style="--i:4">Contáctenos</a>
         </nav>
     </header>
-    <main>
+    <section>
         <div class="call">
             <h1>Gracias por su compra</h1>
-            <p>Recibimos tu compra y nos pondremos en contacto con vos para realizar el envío cuanto antes.</p>
+            <p>Recibimos tu compra y nos pondremos en contacto con usted para realizar el envío cuanto antes.</p>
         </div>
-    </main>
-    <footer>
-        <p>Todos los derechos reservados por copyright</p>
-        <div class="hora" id="hora-local"></div>
-        <div  class="redes ">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="" class="fab fa-instagram"></a>
-            <a href="https://github.com/DanielNoblero/Portafolio.git" class="fab fa-github"></a>
-        </div>
-        <a href="html/contactus.html">Contacto</a>
-    </footer>
+    </section>
+    
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    
 </body>
 </html>

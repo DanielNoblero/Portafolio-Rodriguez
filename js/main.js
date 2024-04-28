@@ -241,3 +241,17 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(actualizarHora, 1000);
     actualizarHora();
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const botonBajar = document.querySelector('.bajar');
+
+    botonBajar.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita que el enlace recargue la página
+
+        // Desplaza la página al final
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth' // Para que el desplazamiento sea suave
+        });
+    });
+});
