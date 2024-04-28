@@ -130,7 +130,7 @@ const actualizarCarrito = () => {
         botonPagar.innerText = "Pagar";
         botonPagar.classList.add("button", "boton-pagar");
         botonPagar.addEventListener("click", () => {
-            window.location.href = './html/checkout.html';
+            window.location.href = '/html/checkout.html';
         });
         carritoTotal.appendChild(botonPagar);
     }
