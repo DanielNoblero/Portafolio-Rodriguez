@@ -110,3 +110,8 @@ function checkInputsFilled() {
 submitButton.addEventListener("click", (e) => {
 	e.preventDefault();
 });
+
+document.getElementById('confirmPaymentButton').addEventListener('click', (event) => {
+    event.preventDefault(); 
+    window.location.href = '/html/confirm.html'; 
+});

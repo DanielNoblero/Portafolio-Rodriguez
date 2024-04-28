@@ -48,7 +48,7 @@ const renderizarProductos = (productos) => {
         btnVerMas.innerText = "Ver más";
         btnVerMas.classList.add("button");
         btnVerMas.addEventListener("click", () => {
-            window.open(`../html/productos.html?id=${producto.id}`,`black`);
+            window.location.href = `../html/productos.html?id=${producto.id}`;
         });
         divBotones.appendChild(btnVerMas);
         div.appendChild(divBotones);
