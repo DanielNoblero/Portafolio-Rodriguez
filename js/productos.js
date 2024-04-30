@@ -18,7 +18,7 @@ const mostrarToast = (mensaje) => {
     }).showToast();
 };
 
-    fetch("/data/productos.json")
+    fetch("./data/productos.json")
         .then((res) => res.json())
         .then((productos) => {
             const producto = productos.find((p) => p.id == productId); // Encuentra el producto por ID
