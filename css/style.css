@@ -349,7 +349,9 @@ h3{
     .header {
         padding: 1.3rem 5%;
     }
-
+    .row2 h3{
+        font-size: 1.3rem ;
+    }
     .container {
         flex-direction: column;
         max-width: 80%;
