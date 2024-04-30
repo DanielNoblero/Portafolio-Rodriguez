@@ -4,7 +4,7 @@
         "titulo": "Pasta",
         "precio": 500,
         "descripcion": "Una pasta con salsa es un plato clásico y reconfortante, compuesto por fideos cocidos al dente, como spaghetti o penne, generosamente bañados en una salsa rica y sabrosa. Las opciones de salsa varían desde una tradicional marinara, cargada de tomates frescos y hierbas aromáticas, hasta una cremosa salsa Alfredo con un toque suave de ajo y queso parmesano. Este plato se puede personalizar con adiciones como albóndigas, verduras asadas o mariscos, convirtiéndolo en una comida versátil y satisfactoria",
-        "img": "../multimedia/pasta.jpg"
+        "img": "/multimedia/pasta.jpg"
     }, 
     {
         "id": 2,
