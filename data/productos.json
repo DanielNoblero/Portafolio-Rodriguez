@@ -11,7 +11,7 @@
         "titulo": "Pizza",
         "precio": 600,
         "descripcion":" Una pizza casera típica consiste en una base de masa crujiente y esponjosa, recién horneada, cubierta con una salsa de tomate rica y aromática. Sobre esta base se esparcen generosamente queso mozzarella derretido y dorado, y se complementa con ingredientes al gusto como rodajas de pepperoni, champiñones frescos, pimientos, albahaca, tomate fresco y cebolla. Este platillo es apreciado por su frescura y la posibilidad de personalizar los toppings según las preferencias de cada uno.",
-        "img": "/multimedia/pizza.jpg"
+        "img": "./multimedia/pizza.jpg"
     }, 
     {
         "id": 3,
