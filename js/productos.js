@@ -47,7 +47,7 @@ const mostrarToast = (mensaje) => {
                 btnVerMas.innerText = "Volver";
                 btnVerMas.classList.add("button");
                 btnVerMas.addEventListener("click", () => {
-                    window.location.href = "/index.html"; // Verifica el nombre del archivo de destino
+                    window.location.href = "/Portafolio-Rodriguez/index.html"; // Verifica el nombre del archivo de destino
                 });
 
                 // Añadir los botones al contenedor
